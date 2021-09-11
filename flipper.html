@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper Project</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .head {
+
+        text-align: center;
+        align-items: center;
+
+    }
+
+    #head-part {
+
+        padding: .1vw;
+        color: black;
+        text-align: center;
+        align-items: center;
+        font-size: xx-large;
+        width: 100%;
+        height: fit-content;
+        background-color: green;
+
+    }
+
+    .head select {
+        margin: 1vw;
+        color: red;
+        font-size: 1.2vw;
+    }
+
+    /*the content part of the project */
+
+    .box {
+        border: 2px solid red;
+        width: 70vw;
+        height: 30vw;
+        margin: auto;
+        position: relative;
+        top: 3vw;
+    }
+
+    #content {
+        background-color: black;
+        color: green;
+        width: 70vw;
+        height: fit-content;
+        font-size: xx-large;
+        position: relative;
+        text-align: center;
+        align-items: center;
+        top: 13vw;
+        left: 0vw;
+        justify-content: center;
+    }
+
+    #btn {
+        cursor: pointer;
+        background-color: deeppink;
+        font-size: 1vw;
+        position: absolute;
+        top: 0vw;
+
+    }
+</style>
+
+<body>
+    <!--head part of the project -->
+    <div class="head">
+        <div id="head-part">
+            <h1>Color Flipper</h1>
+        </div>
+        <select type="radio" name="type" id="option">
+            <option value="Forms">Choose</option>
+            <a href="http://127.0.0.1:5500/flipper.html"></a><option  value="Simple">Simple</option>
+            <option value="Hex">Hex</option>
+        </select>
+    </div>
+
+    <!--the body part/content of the project -->
+    <div class="box">
+        <div id="content">
+            <h4>Background Color : </h4>
+            <div id="ans">
+
+            </div>
+        </div>
+        <button onclick="fun()" id="btn" type="submit">Click Me</button>
+    </div>
+</body>
+<script>
+    function fun() {
+
+        var colors = ["black", "darkviolet", "deeppink", "darkseagreen", "darkslateblue", "darkmagenta", "darkred", "coral", "darkcyan", "cyan", "darkblue", "blueviolet", "brown", "burlywood", "white", "red", "orange", "blue", "violet", "yellow", "teal", "green"];
+        var ran = Math.floor(Math.random() * colors.length);
+        var data = document.getElementsByClassName("box");
+
+        data[0].style.background = colors[ran];
+        //data[0].style.visibility="visible";
+        //data[0].style.color=colors[2];
+        document.getElementById("ans").innerHTML = colors[ran];
+        document.getElementById("ans").style.color = colors[ran];
+    }
+</script>
+
+</html>

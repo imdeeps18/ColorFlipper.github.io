@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<style>
+    .box{
+        border: 2px solid green;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="box">
+        <h1>this is the box </h1>
+        <button onclick="fun()"  type="submit">Click Me</button>
+        <div id="ans">
+
+        </div>
+    </div>
+</body>
+<script>
+    function fun(params) {
+        var data = document.getElementsByClassName("box");
+        //var data=document.getElementById("ox");
+        data[0].style.background="green";
+        document.getElementById("ans").innerHTML="green";
+    }
+</script>
+</html>
